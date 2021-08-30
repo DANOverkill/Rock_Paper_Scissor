@@ -6,13 +6,24 @@
   
 </head>
 <body>
+    <form>
+        <label id="lable">Pick your weapond: </label>
 
+        <select id="userInput">            
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissor">Scissor</option>
+        </select>
+        <button id="runGame">PLAY</button>
+    </form>
   <script>
 
-      const cmpOption1 = 'rock';
-      const cmpOption2 = 'paper';
-      const cmpOption3 = 'scissor';
+      const cmpOption1 = 'Rock';
+      const cmpOption2 = 'Paper';
+      const cmpOption3 = 'Scissor';
 
+      let userChoice = document.getElementById('userInput');
+      
       function rdmValue() {
           let compChoice = Math.random(); 
 
@@ -26,7 +37,32 @@
           
       }
       
-  
+      document.getElementById("runGame").addEventListener("click", function() {
+      
+        let compChoice = rdmValue();
+          
+          if (userChoice === compChoice) {
+            alert('IT\'S A TIE');
+          } else if (userChoice === 'Rock' && compChoice === 'Paper') {
+            alert('YOU LOOSE!')
+          } else if (userChoice === 'Rock' && compChoice === 'Scissor') {
+            alert('YOU WIN!')
+          } else if (userChoice === 'Paper' && compChoice === 'Rock') {
+            alert('YOU WIN!')
+          } else if (userChoice === 'Paper' && compChoice === 'Scissor') {
+            alert('YOU LOOSE!')
+          } else if (userChoice === 'Scissor' && compChoice === 'Rock') {
+            alert('YOU LOOSE!')
+          } else if (userChoice === 'Scissor' && compChoice === 'Paper') {
+            alert('YOU WIN!')
+          }
+      })
+
+      
+      
+      
+
+
 
   </script>
 
