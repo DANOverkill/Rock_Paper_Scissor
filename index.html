@@ -6,6 +6,7 @@
   
 </head>
 <body>
+  <!-- commenting out the GUI for the time being. 
     <form>
         <label id="lable">Pick your weapond: </label>
 
@@ -16,49 +17,49 @@
         </select>
         <button id="runGame">PLAY</button>
     </form>
+  -->
   <script>
 
-      const cmpOption1 = 'Rock';
-      const cmpOption2 = 'Paper';
-      const cmpOption3 = 'Scissor';
+      let userChoice = prompt('Choose: Rock Paper or Scissor (case sensitive)');
+      console.log(userChoice);
 
-      let userChoice = document.getElementById('userInput');
+      let compChoice = rdmValue();
       
       function rdmValue() {
-          let compChoice = Math.random(); 
+          let cmpSelection = Math.random(); 
 
-              if (compChoice < 0.33) {
-                return cmpOption1;
-              } else if (compChoice >= 0.33 && compChoice <= 0.66) {
-                return cmpOption2;
+              if (cmpSelection < 0.33) {
+                return 'Rock';
+              } else if (cmpSelection >= 0.33 && cmpSelection <= 0.66) {
+                return 'Paper';
               } else {
-                  return cmpOption3;
+                  return 'Scissor';
               }
           
       }
       
-      document.getElementById("runGame").addEventListener("click", function() {
+      function round(userInput, compChoice) {
       
-        let compChoice = rdmValue();
-          
           if (userChoice === compChoice) {
-            alert('IT\'S A TIE');
+            return 'IT\'S A TIE';
           } else if (userChoice === 'Rock' && compChoice === 'Paper') {
-            alert('YOU LOOSE!')
+            return 'Paper beats Rock, YOU LOOSE!';
           } else if (userChoice === 'Rock' && compChoice === 'Scissor') {
-            alert('YOU WIN!')
+            return 'Rock beats Scissors, YOU WIN!';
           } else if (userChoice === 'Paper' && compChoice === 'Rock') {
-            alert('YOU WIN!')
+            return 'Paper beats Rock, YOU WIN!';
           } else if (userChoice === 'Paper' && compChoice === 'Scissor') {
-            alert('YOU LOOSE!')
+            return 'Scissor beats Paper, YOU LOOSE!';
           } else if (userChoice === 'Scissor' && compChoice === 'Rock') {
-            alert('YOU LOOSE!')
+            return 'Rock beats Scissors, YOU LOOSE!';
           } else if (userChoice === 'Scissor' && compChoice === 'Paper') {
-            alert('YOU WIN!')
+            return 'Scissor beats Paper, YOU WIN!';
           }
-      })
+      }
 
-      
+      function match() {
+
+      }
       
       
 
