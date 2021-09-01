@@ -20,46 +20,63 @@
   -->
   <script>
 
-      let userChoice = prompt('Choose: Rock Paper or Scissor (case sensitive)');
-      console.log(userChoice);
 
+
+  function round() {
+
+
+      let userChoice = prompt('Choose: Rock Paper or Scissor (case sensitive)');
       let compChoice = rdmValue();
       
-      function rdmValue() {
-          let cmpSelection = Math.random(); 
 
-              if (cmpSelection < 0.33) {
-                return 'Rock';
-              } else if (cmpSelection >= 0.33 && cmpSelection <= 0.66) {
-                return 'Paper';
-              } else {
-                  return 'Scissor';
-              }
-          
-      }
+      function rdmValue() {
+        let cmpSelection = Math.random(); 
+
+          if (cmpSelection < 0.33) {
+              return 'Rock';
+            } else if (cmpSelection >= 0.33 && cmpSelection <= 0.66) {
+              return 'Paper';
+            } else {
+              return 'Scissor';
+            }
+              
+      }    
+
       
-      function round(userInput, compChoice) {
-      
-          if (userChoice === compChoice) {
-            return 'IT\'S A TIE';
-          } else if (userChoice === 'Rock' && compChoice === 'Paper') {
-            return 'Paper beats Rock, YOU LOOSE!';
-          } else if (userChoice === 'Rock' && compChoice === 'Scissor') {
-            return 'Rock beats Scissors, YOU WIN!';
-          } else if (userChoice === 'Paper' && compChoice === 'Rock') {
-            return 'Paper beats Rock, YOU WIN!';
-          } else if (userChoice === 'Paper' && compChoice === 'Scissor') {
-            return 'Scissor beats Paper, YOU LOOSE!';
-          } else if (userChoice === 'Scissor' && compChoice === 'Rock') {
-            return 'Rock beats Scissors, YOU LOOSE!';
-          } else if (userChoice === 'Scissor' && compChoice === 'Paper') {
-            return 'Scissor beats Paper, YOU WIN!';
+      function compare(choice1, choice2) {
+            
+
+        if (choice1 === choice2) {
+            return 'This round is A TIE!';
+          } else if (choice1 === 'Rock' && choice2 === 'Paper') {
+            return 'Paper beats Rock, YOU LOOSE this round!';
+          } else if (choice1 === 'Rock' && choice2 === 'Scissor') {
+            return 'Rock beats Scissors, YOU WIN this round!';
+          } else if (choice1 === 'Paper' && choice2 === 'Rock') {
+            return 'Paper beats Rock, YOU WIN this round!';
+          } else if (choice1 === 'Paper' && choice2 === 'Scissor') {
+            return 'Scissor beats Paper, YOU LOOSE this round!';
+          } else if (choice1 === 'Scissor' && choice2 === 'Rock') {
+            return 'Rock beats Scissors, YOU LOOSE this round!';
+          } else if (choice1 === 'Scissor' && choice2 === 'Paper') {
+            return 'Scissor beats Paper, YOU WIN this round!';
           }
       }
+      
+      
+     
+      if (compare(userChoice, compChoice).includes('WIN') === true) {
+      return 'pWin'
+    } else if (compare(userChoice, compChoice).includes('LOOSE') === true) {
+      return 'pLoose'
+    } else if (compare(userChoice, compChoice).includes('TIE') === true) {
+      return 'tie'
+    } 
+    
+    
+  } 
 
-      function match() {
-
-      }
+  
       
       
 
