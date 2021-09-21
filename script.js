@@ -1,6 +1,6 @@
 function round() {
 
-    let userInput = prompt('Choose: Rock Paper or Scissor');
+    let userInput = prompt('Choose: Rock Paper or Scissors');
     let userChoice = userInput.toLowerCase();
     let compChoice = rdmValue();
     
@@ -12,7 +12,7 @@ function round() {
             } else if (cmpSelection >= 0.33 && cmpSelection <= 0.66) {
             return 'paper';
             } else {
-            return 'scissor';
+            return 'scissors';
         }
     }
     
@@ -24,20 +24,20 @@ function round() {
         } else if (choice1 === 'rock' && choice2 === 'paper') {
         console.log('Paper beats Rock, YOU LOOSE this round!');
         return 1;
-        } else if (choice1 === 'rock' && choice2 === 'scissor') {
+        } else if (choice1 === 'rock' && choice2 === 'scissors') {
         console.log('Rock beats Scissors, YOU WIN this round!');
         return 2;
         } else if (choice1 === 'paper' && choice2 === 'rock') {
         console.log('Paper beats Rock, YOU WIN this round!');
         return 2;
-        } else if (choice1 === 'paper' && choice2 === 'scissor') {
-        console.log('Scissor beats Paper, YOU LOOSE this round!');
+        } else if (choice1 === 'paper' && choice2 === 'scissors') {
+        console.log('Scissors beats Paper, YOU LOOSE this round!');
         return 1;
-        } else if (choice1 === 'scissor' && choice2 === 'rock') {
+        } else if (choice1 === 'scissors' && choice2 === 'rock') {
         console.log('Rock beats Scissors, YOU LOOSE this round!');
         return 1;
-        } else if (choice1 === 'scissor' && choice2 === 'paper') {
-        console.log('Scissor beats Paper, YOU WIN this round!');
+        } else if (choice1 === 'scissors' && choice2 === 'paper') {
+        console.log('Scissors beats Paper, YOU WIN this round!');
         return 2;
         }
     }

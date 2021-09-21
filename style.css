@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    color: #1e282f;
+}
+
+.gameBackground {
+background-color:#1e282f;
+color: #ccb9e0;
+text-align: center;
+}
+
+.scoreBoard {
+    border-style: solid;
+    border-color: rgb(241, 96, 108);
+    margin-left: 37%;
+    margin-right: 37%;
+    border-width: 3px;
+    border-radius: 4px;
+}
+
+.lable {
+    margin-top: 0;
+    color: rgb(46, 34, 35);
+    background-color: rgb(241, 96, 108);
+}
+
+.rockButton {
+
+}
+.paperButton {
+
+}
+.scissorsButton {
+
+}
