@@ -1,6 +1,37 @@
+body {
+    background-color: #1e282f;
+}
+
 h1 {
+    position: relative;
+    background-color: rgb(238, 255, 246);
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
     color: #1e282f;
+}
+
+.rules {
+    position: static;
+    text-align: center;
+    color: #ccb9e0;
+    padding-top: 0px;
+    margin-bottom: 45px;
+}
+
+.instructions{
+    font-size: 18px;
+}
+
+.startButton {
+    color:slategrey;
+    background-color: seashell;
+    border-style: outset;
+    border-radius: 3px;
+    margin-left: 43.7%;
+    margin-right: 43.7%;
 }
 
 .gameBackground {
@@ -22,14 +53,47 @@ text-align: center;
     margin-top: 0;
     color: rgb(46, 34, 35);
     background-color: rgb(241, 96, 108);
+    
+}
+
+.buttons {
+    display: flex;
+    margin-top: 50px;
 }
 
 .rockButton {
-
+flex: 1;
+color:slategrey;
+background-color: seashell;
+border-style: outset;
+border-radius: 3px;
+margin-left: 10%;
+margin-right: 10%;
 }
 .paperButton {
-
+flex: 1;
+color:slategrey;
+background-color: seashell;
+border-style: outset;
+border-radius: 3px;
+margin-left: 10%;
+margin-right: 10%;
 }
 .scissorsButton {
+flex: 1;
+color:slategrey;
+background-color: seashell;
+border-style: outset;
+border-radius: 3px;
+margin-left: 10%;
+margin-right: 10%;
+}
 
+.footer {
+    color:#6f6b67;
+    display: flex;
+    position:fixed;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
 }
