@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body {
-    background-color: #1e282f;
+    font-family: 'Ubuntu';
+    background-color: #ffffff;
+    margin: 0px;
 }
 
 h1 {
     position: relative;
-    background-color: rgb(238, 255, 246);
+    background-color: rgb(238, 238, 238);
     margin-top: 0px;
     margin-bottom: -5px;
     padding-top: 15px;
@@ -16,7 +20,7 @@ h1 {
 .rules {
     position: static;
     text-align: center;
-    color: #ccb9e0;
+    color: rgb(100, 100, 100);
     padding-top: 0px;
     margin-bottom: 45px;
 }
@@ -31,14 +35,14 @@ h1 {
 }
 
 .gameBackground {
-    background-color:#1e282f;
-    color: #ccb9e0;
+    background-color:#ffffff;
+    color: rgb(100, 100, 100);
     text-align: center;
 }
 
 .scoreBoard {
     border-style: solid;
-    border-color: rgb(241, 96, 108);
+    border-color: rgb(207, 40, 49);
     margin-left: 37%;
     margin-right: 37%;
     border-width: 3px;
@@ -48,13 +52,13 @@ h1 {
 .lable {
     margin-top: 0;
     color: rgb(46, 34, 35);
-    background-color: rgb(241, 96, 108);
+    background-color: rgb(207, 40, 49);
     transition: all .5s ease;
 }
 
 .updating {
     transform: scale(1.1);
-    color: #ccb9e08c;    
+    color: rgb(100, 100, 100);    
 }
 
 .buttons {
@@ -65,7 +69,8 @@ h1 {
 
 .rockButton {
     flex: 1;
-    color:slategrey;
+    cursor: pointer;
+    color:rgb(100, 100, 100);
     background-color: seashell;
     border-style: outset;
     border-radius: 3px;
@@ -75,7 +80,8 @@ h1 {
 
 .paperButton {
     flex: 1;
-    color:slategrey;
+    cursor: pointer;
+    color:rgb(100, 100, 100);;
     background-color: seashell;
     border-style: outset;
     border-radius: 3px;
@@ -85,7 +91,8 @@ h1 {
 
 .scissorsButton {
     flex: 1;
-    color:slategrey;
+    cursor: pointer;
+    color:rgb(100, 100, 100);
     background-color: seashell;
     border-style: outset;
     border-radius: 3px;
@@ -96,10 +103,11 @@ h1 {
 .resetButton {
     top: 310px;
     display: flex;
+    cursor: pointer;
     position: fixed;
     justify-content: center;
     width: 10%;
-    color:slategrey;
+    color:rgb(100, 100, 100);
     background-color: seashell;
     border-style: outset;
     border-radius: 3px;
@@ -108,9 +116,13 @@ h1 {
 }
 
 .footer {
+    background-color: rgb(238, 238, 238);
+    padding-top: 3px;
+    padding-bottom: 3px;
     color:#6f6b67;
     display: flex;
     position:fixed;
+    font-size: 14px;
     justify-content: center;
     bottom: 0px;
     width: 100%;
