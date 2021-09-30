@@ -13,22 +13,19 @@ let comptPoints = 0;
 
 //UI
 rockButton.addEventListener('click', function(){
-    playerChoice = 'rock';
-    round(playerChoice, rdmValue());
+    round('rock', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
 })
 paperButton.addEventListener('click', function(){
-    playerChoice = 'paper';
-    round(playerChoice, rdmValue());
+    round('paper', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
 })
 scissorsButton.addEventListener('click', function(){
-    playerChoice = 'scissors';
-    round(playerChoice, rdmValue());
+    round('scissors', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
@@ -61,11 +58,11 @@ let resetGame = function() {
 
 //GAME LOGIC
 function rdmValue() {
-    let cmpSelection = Math.random();
+    let cmpSelection = Math.floor(Math.random() * 3);
     
-    if (cmpSelection < 0.33) {
+    if (cmpSelection === 0) {
         return 'rock';
-        } else if (cmpSelection >= 0.33 && cmpSelection <= 0.66) {
+        } else if (cmpSelection === 1) {
         return 'paper';
         } else {
         return 'scissors';
