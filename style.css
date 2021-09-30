@@ -56,6 +56,10 @@ h1 {
     transition: all .5s ease;
 }
 
+.fade {
+    opacity: 0;
+}
+
 .updating {
     transform: scale(1.1);
     color: rgb(100, 100, 100);    
@@ -72,32 +76,52 @@ h1 {
     cursor: pointer;
     color:rgb(100, 100, 100);
     background-color: seashell;
-    border-style: outset;
+    box-shadow: 1px 1px rgb(49, 49, 49);
     border-radius: 3px;
     margin-left: 10%;
     margin-right: 10%;
+}
+.rockButton:hover {background-color: rgb(236, 222, 212)}
+
+.rockButton:active {
+  background-color: rgb(216, 208, 210);
+  box-shadow: -2px -2px rgb(49, 49, 49);
+  transform: translateY(2px);
 }
 
 .paperButton {
     flex: 1;
     cursor: pointer;
-    color:rgb(100, 100, 100);;
+    color:rgb(100, 100, 100);
     background-color: seashell;
-    border-style: outset;
+    box-shadow: 1px 1px rgb(49, 49, 49);
     border-radius: 3px;
     margin-left: 10%;
     margin-right: 10%;
 }
+.paperButton:hover {background-color: rgb(236, 222, 212)}
 
+.paperButton:active {
+  background-color: rgb(216, 208, 210);
+  box-shadow: -2px -2px rgb(49, 49, 49);
+  transform: translateY(2px);
+}  
 .scissorsButton {
     flex: 1;
     cursor: pointer;
     color:rgb(100, 100, 100);
     background-color: seashell;
-    border-style: outset;
+    box-shadow: 1px 1px rgb(49, 49, 49);
     border-radius: 3px;
     margin-left: 10%;
     margin-right: 10%;
+}
+.scissorsButton:hover {background-color: rgb(236, 222, 212)}
+
+.scissorsButton:active {
+  background-color: rgb(216, 208, 210);
+  box-shadow: -2px -2px rgb(49, 49, 49);
+  transform: translateY(2px);
 }
 
 .resetButton {
@@ -109,10 +133,17 @@ h1 {
     width: 10%;
     color:rgb(100, 100, 100);
     background-color: seashell;
-    border-style: outset;
+    box-shadow: 1px 1px rgb(49, 49, 49);
     border-radius: 3px;
     margin-left: 10%;
     margin-right: 10%;
+}
+.resetButton:hover {background-color: rgb(236, 222, 212)}
+
+.resetButton:active {
+  background-color: rgb(216, 208, 210);
+  box-shadow: -2px -2px rgb(49, 49, 49);
+  transform: translateY(2px);
 }
 
 .footer {
