@@ -12,23 +12,30 @@ let playerPoints = 0;
 let comptPoints = 0;
 
 //UI
-rockButton.addEventListener('click', function(){
+rockButton.addEventListener('click', function(e){
     round('rock', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
+    roundLable.classList.add('fade');
+    roundLable.addEventListener('transitionend', removeFade);
 })
+
 paperButton.addEventListener('click', function(){
     round('paper', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
+    roundLable.classList.add('fade');
+    roundLable.addEventListener('transitionend', removeFade);
 })
 scissorsButton.addEventListener('click', function(){
     round('scissors', rdmValue());
     playerScore.textContent = `Player: ${playerPoints}`;
     computerScore.textContent = `Computer: ${comptPoints}`;
     match();
+    roundLable.classList.add('fade');
+    roundLable.addEventListener('transitionend', removeFade);
 })
 
 let resetGameButton = function() {
@@ -42,6 +49,8 @@ let resetGameButton = function() {
     resetButton.addEventListener('click', function() {
         resetGame(); 
     })
+    roundLable.classList.add('fade');
+    roundLable.addEventListener('transitionend', removeFade);
 }
 
 let resetGame = function() {
@@ -55,6 +64,11 @@ let resetGame = function() {
     buttons.appendChild(scissorsButton);
     document.querySelector('.resetButton').remove(); 
 }
+
+function removeFade(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('fade');
+  }
 
 //GAME LOGIC
 function rdmValue() {
